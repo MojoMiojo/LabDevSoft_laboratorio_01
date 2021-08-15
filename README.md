@@ -25,7 +25,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Neste laboratório, vamos projetar um Sistema de Matrículas para uma Universidade
 </br>
 
-## Histórias de usuário 
+## Histórias de usuário
   • Como aluno, eu quero semestralmente me matricular em disciplina, para expandir meu conhecimento, Para fazer com que a universidade mantenha seus pilares de educação pesquisa e extensão
   
   • Como aluno, eu quero ser notificado do valor pago referente às disciplinas escolhidas no semestre, para ter um controle financeiro.
