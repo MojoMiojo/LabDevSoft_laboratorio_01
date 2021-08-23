@@ -26,15 +26,18 @@ Neste laboratório, vamos projetar um Sistema de Matrículas para uma Universida
 </br>
 
 ## Histórias de usuário
-  • Como aluno, eu quero semestralmente me matricular em disciplina, para expandir meu conhecimento, Para fazer com que a universidade mantenha seus pilares de educação pesquisa e extensão
-  
-  • Como aluno, eu quero ser notificado do valor pago referente às disciplinas escolhidas no semestre, para ter um controle financeiro.
-
-
-  • Como professor, eu quero ter acesso a lista de alunos matriculado em cada disciplina, para gerenciar a quantidade.
-
-  • Como usuário, eu preciso me autenticar no sistema, para que garantit minha a segurança das minhas informações
-
-  • Como secretária da universidade, preciso semestralmente gerar currículo.
-  • Como secretária da universidade, preciso semestralmente manter as informações dos alunos, professores e disciplina.
+    •Como aluno, eu quero semestralmente me matricular em disciplina, de modo que possa ter acesso ao seu conteúdo durante o semestre.
+    •Como aluno, eu quero cancelar minha matricular em disciplina, de modo que a mesma não inclua na minha grade de matriculas semestrais •
+    •Como aluno, eu quero ser notificado do valor pago referente às disciplinas escolhidas no semestre, para ter um controle financeiro
+    
+    •Eu como Sistema de Cobrança, devo ser informado após um aluno se matricular em uma disciplina, de modo que possa notifica-lo 
+    
+    •Como professor, eu quero ter acesso a lista de alunos matriculado em cada disciplina, para gerenciar a quantidade.
+    
+    •Como usuário, eu preciso me autenticar no sistema, para que garantir a segurança das minhas informações
+    
+    •Como secretária da universidade, gostaria de semestralmente gerar currículo, para que as disciplinas fiquem disponíveis para matricula.
+    •Como secretária da universidade, preciso gerencias as informações dos alunos, de modo que possa cadastrar, excluir e editar.
+    •Como secretária da universidade, preciso gerencias as informações dos professores, de modo que possa cadastrar, excluir e editar.
+    •Como secretária da universidade, preciso semestralmente gerencias as informações dos cursos, de modo que possa cadastrar, excluir e editar.
 
