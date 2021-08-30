@@ -1,6 +1,10 @@
 package business;
 
-public class Curso {
+import java.io.Serializable;
+
+public class Curso implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private Long id;
 	private int creditos;
 	private String nome;

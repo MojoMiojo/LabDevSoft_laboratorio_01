@@ -29,7 +29,10 @@ public class Aplication {
 		DAO<Professor, String> professorDAO = new ProfessorDAO("professores.bin");
         
 		Scanner sc = new Scanner(System.in);
-				
+		
+		String nome, cpf, email, senha;
+		Long codigo;
+		
 		int op = 0;
 		menu(0);
 		while (op != 100) {		
@@ -59,13 +62,13 @@ public class Aplication {
 			case 7:
 				System.out.print("Digite seu nome: ");
 				sc.nextLine();
-				String nome = sc.nextLine();
+				nome = sc.nextLine();
 				System.out.print("Digite seu cpf: ");
-				String cpf = sc.nextLine();
+				cpf = sc.nextLine();
 				System.out.print("Digite seu email: ");
-				String email = sc.nextLine();
+				email = sc.nextLine();
 				System.out.print("Digite sua senha: ");
-				String senha = sc.nextLine();
+				senha = sc.nextLine();
 				System.out.print("Digite sua matrícula: ");
 				Long matricula = (long) sc.nextInt();
 				alunoDAO.add(new Aluno(nome, cpf, email, senha, matricula));
@@ -80,13 +83,88 @@ public class Aplication {
 				menu(0);
 				break;
 			case 9 :
+				System.out.print("Digite seu nome: ");
+				sc.nextLine();
+				nome = sc.nextLine();
+				System.out.print("Digite seu cpf: ");
+				cpf = sc.nextLine();
+				System.out.print("Digite seu email: ");
+				email = sc.nextLine();
+				System.out.print("Digite sua senha: ");
+				senha = sc.nextLine();
+				System.out.print("Digite sua codigo: ");
+				Long cod = (long) sc.nextInt();
+				professorDAO.add(new Professor(nome, cpf, email, senha, cod));
+				
+				menu(0);
+				break;
+			case 10 :
+				List<Professor> professores = professorDAO.getAll();
+				for (Professor professor: professores) {
+					System.out.println(professor);
+				}
+				menu(0);
+				break;
+			case 11 :
+				System.out.print("Digite o nome: ");
+				sc.nextLine();
+				nome = sc.nextLine();
+				System.out.print("Digite o ID: ");
+				Long id = (long) sc.nextInt();
+				System.out.print("Digite a quantidade de creditos: ");
+				int credito = sc.nextInt();
+				cursoDAO.add(new Curso(id, credito, nome));
+				
+				menu(0);
+				break;
+			case 12 :
+				List<Curso> cursos = cursoDAO.getAll();
+				for (Curso curso: cursos) {
+					System.out.println(curso);
+				}
+				menu(0);
+				break;
+			case 13 :
+				System.out.print("Digite o nome: ");
+				sc.nextLine();
+				nome = sc.nextLine();
+				System.out.print("Digite a carga horaria: ");
+				String carga = sc.nextLine();
+				System.out.print("Digite o código do curso: ");
+				Long codigoCurso = (long) sc.nextInt();
+				System.out.print("Digite o codigo: ");
+				codigo = (long) sc.nextInt();
+				disciplinaDAO.add(new Disciplina(codigo, codigoCurso, nome, carga));
+				
+				menu(0);
+				break;
+			case 14 :
+				List<Disciplina> disciplinas = disciplinaDAO.getAll();
+				for (Disciplina disciplina: disciplinas) {
+					System.out.println(disciplina);
+				}
+				menu(0);
+				break;
+			case 15 :
+				System.out.print("Digite o código da disciplina: ");
+				Long codigoDisciplina = (long) sc.nextInt();
+				System.out.print("Digite o código do professor: ");
+				Long codigoProfessor = (long) sc.nextInt();
+				System.out.print("Digite o codigo: ");
+				codigo = (long) sc.nextInt();
+				ofertaDAO.add(new Oferta(codigo, codigoDisciplina, codigoProfessor, true));
+				
+				menu(0);
+				break;
+			case 16 :
+				List<Oferta> ofertas = ofertaDAO.getAll();
+				for (Oferta oferta: ofertas) {
+					System.out.println(oferta);
+				}
 				menu(0);
 				break;
 			default:
 				System.out.println("Opção inválida");
-				menu(0);
-				break;
-			case 11:
 				menu(0);
 				break;
 			case 100:
@@ -141,8 +219,7 @@ public class Aplication {
 		}
 		if(param == 6) {
 			System.out.println("Menu de Opções da Matricula:");
-			System.out.println("17 - Cadastrar");
-			System.out.println("18 - Listar");
+			System.out.println("To Do");
 		}
 		System.out.println("100 - Sair");
 	}

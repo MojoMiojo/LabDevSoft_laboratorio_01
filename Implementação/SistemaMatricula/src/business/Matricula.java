@@ -1,6 +1,10 @@
 package business;
 
-public class Matricula {
+import java.io.Serializable;
+
+public class Matricula implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private Long codigo;
 	private Long codigoOferta;
 	private Long matriculaAluno;

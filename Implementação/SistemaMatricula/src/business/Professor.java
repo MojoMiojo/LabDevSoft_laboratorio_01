@@ -1,6 +1,10 @@
 package business;
 
-public class Professor extends Usuario {
+import java.io.Serializable;
+
+public class Professor extends Usuario implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private Long cod;
 	
 	public Professor(String nome, String cpf, String email, String senha, Long cod) {

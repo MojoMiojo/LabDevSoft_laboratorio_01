@@ -1,6 +1,10 @@
 package business;
 
-public class Oferta {
+import java.io.Serializable;
+
+public class Oferta implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private Long codigo;
 	private Long codigoDisciplina;
 	private Long codigoProfessor;
@@ -51,7 +55,7 @@ public class Oferta {
 	public String toString() {
 		return "Código: " + codigo + 
 				"  	Código Disciplina: " + codigoDisciplina + 
-				"   Nome: " + codigoProfessor +
+				"   Código Professor: " + codigoProfessor +
 				"   Ativa:" + (ativa ? "sim" : "não");
 	}
 }
